@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "StepBattle",
+    "slug": "stepbattle",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourname.stepbattle",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "StepBattle reads your step count to track challenge progress.",
+        "NSHealthUpdateUsageDescription": "StepBattle needs health access to track your steps."
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.access": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourname.stepbattle",
+      "permissions": ["android.permission.ACTIVITY_RECOGNITION"]
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "14.0"
+          }
+        }
+      ]
+    ],
+    "scheme": "stepbattle",
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
